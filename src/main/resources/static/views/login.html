@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<div>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#/">Spring Security</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="#/">Home</a></li>
+                <li><a href="#/user">User</a></li>
+                <li><a href="#/admin">Admin</a></li>
+                <li class="active"><a href="#/login">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid" ng-controller="loginController">
+        <div class="col-md-6 col-md-offset-3" style="text-align: center">
+            <div class="alert alert-warning alert-dismissible" role="alert" style="display: none">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+                <strong>Warning!</strong> some areas are empties or the identifiers are wrong !!
+            </div>
+            <h2 style="font-weight: bold">Authentication</h2>
+            <div class="form-group" style="text-align: center">
+                <label><h3 style="font-weight: bold">Username:</h3></label>
+                <input type="text" class="form-control" placeholder="Username" ng-model="username" id="username">
+            </div>
+            <div class="form-group" style="text-align: center">
+                <label><h3 style="font-weight: bold">Password:</h3></label>
+                <input type="password" class="form-control" ng-model="password" id="password" placeholder="Password">
+            </div>
+            <button type="button" class="btn btn-primary btn-lg" ng-click="login(username,password)">Sign in</button>
+            <div><h3>{{error}}</h3></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
