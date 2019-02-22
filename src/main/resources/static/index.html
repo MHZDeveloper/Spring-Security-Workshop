@@ -9,9 +9,29 @@
     <script src="webjars/jquery/3.2.1/dist/jquery.min.js"></script>
     <script src="webjars/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="js/index.js"></script>
+    <style>
+        @media screen and (min-width: 1000px) {
+            .bg-image {
+                background: url(res/newfd.jpg);
+                background-repeat: no-repeat;
+                /*background-size:500px 500px;*/
+                background-position: center;
+                background-attachment: fixed;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            .bg-image {
+                background: url(res/newfd.jpg);
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: center top;
+                /*background-attachment: fixed;*/
+            }
+        }
+    </style>
 </head>
-<body ng-app="myApp" ng-controller="indexController"
-      style="background : url(res/fd2.jpg);background-repeat: no-repeat;background-size: cover">
+<body ng-app="myApp" ng-controller="indexController" class="bg-image">
 <div>
     <ng-view></ng-view>
 </div>
