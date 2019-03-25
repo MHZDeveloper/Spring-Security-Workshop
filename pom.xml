@@ -65,13 +65,26 @@
             <version>3.2.0</version>
         </dependency>
 
+        <!--war configuration-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+        </dependency>
+
     </dependencies>
 
+    <!--war configuration-->
+    <packaging>war</packaging>
+
     <build>
+        <finalName>${artifactId}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <!--<configuration>-->
+                <!--<executable>true</executable>-->
+                <!--</configuration>-->
             </plugin>
         </plugins>
     </build>
